@@ -345,21 +345,6 @@ if not isfile("patrick.Pub") then
   
  
  
-    ActiveUserLabel.Name = "ActiveUserLabel"
-    ActiveUserLabel.Parent = BottomBar
-    ActiveUserLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    ActiveUserLabel.BackgroundTransparency = 1.000
-    ActiveUserLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    ActiveUserLabel.BorderSizePixel = 0
-    ActiveUserLabel.Position = UDim2.new(1.0055, -204, -1.46925938, 1)
-    ActiveUserLabel.Size = UDim2.new(0.00125635799, 200, 4.04341888, -1)
-    ActiveUserLabel.FontFace = Fonts.ProggyTiny
-    ActiveUserLabel.RichText = true
-    ActiveUserLabel.Text = "active user: <font color=\"rgb(189, 172, 255)\">7d</font>"
-    ActiveUserLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    ActiveUserLabel.TextSize = 9
-    ActiveUserLabel.TextXAlignment = Enum.TextXAlignment.Right
- 
     for _, obj in pairs(menu:GetDescendants()) do
         if obj.Name:lower():find('name_esp') then
            obj.Text = '<font color="rgb(189, 172, 255)">' .. game.Players.LocalPlayer.Name .. '</font>'
