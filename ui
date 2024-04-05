@@ -10,10 +10,7 @@ if not isfile("patrick.Pub") then
     if obj.Name:lower():find('userlabel') then
         obj.Text = 'active user: <font color="rgb(255, 255, 255)">' .. game.Players.LocalPlayer.Name .. '</font>'
     end
-    if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(255, 255, 255)">Paid</font>'
-    end
- end
+
  
  --vars
  local CloneCore = cloneref(game.CoreGui)
@@ -64,7 +61,6 @@ if not isfile("patrick.Pub") then
  local UIListLayout = Instance.new("UIListLayout")
  local Name_2 = Instance.new("TextLabel")
  
-
  Keybinds.Name = "Keybinds"
  Keybinds.Parent = CloneCore
  Keybinds.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -352,9 +348,7 @@ if not isfile("patrick.Pub") then
     pre.TextSize = 9
     pre.TextStrokeTransparency = 0.000
  
-    local BottomBar = Instance.new("Frame")
-    local BuildLabel = Instance.new("TextLabel")
-    local ActiveUserLabel = Instance.new("TextLabel")
+
  
     BottomBar.Name = "BottomBar"
     BottomBar.Parent = menu.bg
@@ -364,21 +358,6 @@ if not isfile("patrick.Pub") then
     BottomBar.Position = UDim2.new(0.00487692887, 1, 0.973760962, -25)
     BottomBar.Size = UDim2.new(1.02570701, -2, -0.00615911139, 24)
  
-    BuildLabel.Name = "BuildLabel"
-    BuildLabel.Parent = BottomBar
-    BuildLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    BuildLabel.BackgroundTransparency = 1.000
-    BuildLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-    BuildLabel.BorderSizePixel = 0
-    BuildLabel.Position = UDim2.new(0.135, 0, 0.813, 0)
-    BuildLabel.Size = UDim2.new(0, 709,0, 8)
-    BuildLabel.FontFace = Fonts.ProggyTiny
-    BuildLabel.RichText = true
-    BuildLabel.Text = "build: <font color=\"rgb(255, 255, 255)\">paid</font>"
-    BuildLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    BuildLabel.TextSize = 9
-    BuildLabel.TextWrapped = true
-    BuildLabel.TextXAlignment = Enum.TextXAlignment.Left
  
     ActiveUserLabel.Name = "ActiveUserLabel"
     ActiveUserLabel.Parent = BottomBar
