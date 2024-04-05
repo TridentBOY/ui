@@ -10,7 +10,10 @@ if not isfile("patrick.Pub") then
     if obj.Name:lower():find('userlabel') then
         obj.Text = 'active user: <font color="rgb(255, 255, 255)">' .. game.Players.LocalPlayer.Name .. '</font>'
     end
-
+    if obj.Name:lower():find('buildlabel') then
+        obj.Text = 'build: <font color="rgb(255, 255, 255)">Paid</font>'
+    end
+ end
  
  --vars
  local CloneCore = cloneref(game.CoreGui)
@@ -348,7 +351,6 @@ if not isfile("patrick.Pub") then
     pre.TextSize = 9
     pre.TextStrokeTransparency = 0.000
  
-
  
     BottomBar.Name = "BottomBar"
     BottomBar.Parent = menu.bg
