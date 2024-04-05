@@ -509,10 +509,10 @@ if not isfile("patrick.Pub") then
                         for i,v in next, library.tabbuttons do
                         local state = v == newButton
                         local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
-                        local imageTweenStart = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(189, 172, 255)})
-                        local textTweenStart = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(189, 172, 255)})
-                        local imageTweenEnd = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(25,25,25)})
-                        local textTweenEnd = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(125, 125, 125)})
+                        local imageTweenStart = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+                        local textTweenStart = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(255, 255, 255)})
+                        local imageTweenEnd = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+                        local textTweenEnd = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(255, 255, 255)})
                         if state then
                             imageTweenStart:Play()
                             textTweenStart:Play()
@@ -693,7 +693,7 @@ if not isfile("patrick.Pub") then
                                 Name.Size = UDim2.new(1, 0, 1, 0)
                                 Name.FontFace = Fonts.ProggyTiny
                                 Name.Text = ""
-                                Name.TextColor3 = Color3.fromRGB(125, 125, 125)
+                                Name.TextColor3 = Color3.fromRGB(255, 255, 255)
                                 Name.TextSize = 9
                                 Name.RichText = true
                                 Name.Visible = false
@@ -763,7 +763,7 @@ if not isfile("patrick.Pub") then
                                             end
                                         end
                                     end
-                                    button.TextColor3 = Color3.fromRGB(155, 155, 155)
+                                    button.TextColor3 = Color3.fromRGB(255, 255, 255)
                                     end
                                 end
                                 if not next and key == library.flags[args.flag] and args.callback then
@@ -780,7 +780,7 @@ if not isfile("patrick.Pub") then
                                                 Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                             else
                                                 Toggle = false
-                                                Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                Name.Text = "<font color=\"rgb(255, 255, 255)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                             end
                                         end
                                     end
@@ -805,9 +805,9 @@ if not isfile("patrick.Pub") then
                                                 if args.gui then
                                                     Name.Visible = true
                                                     if args.type == "hold" then
-                                                        Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                        Name.Text = "<font color=\"rgb(255, 255, 255)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                                     else
-                                                        Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                        Name.Text = "<font color=\"rgb(255, 255, 255)\">" ..args.text.. ":</font>".." <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                                     end
                                                 end
                                             end
@@ -819,7 +819,7 @@ if not isfile("patrick.Pub") then
                                         local keyName = tostring(library.flags[args.flag]):split(".")[3] -- Extracts the key name from the enum value
                                         if args.gui then
                                             Name.Visible = true
-                                            Name.Text = args.text..": <font color=\"rgb(125, 125, 125)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                            Name.Text = args.text..": <font color=\"rgb(255, 255, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                         end
                                         end
                                     end)
@@ -839,7 +839,7 @@ if not isfile("patrick.Pub") then
                                 local keyName = tostring(args.key):split(".")[3] -- Extracts the key name from the enum value
                                 if args.gui then
                                     Name.Visible = true
-                                    Name.Text = args.text..": <font color=\"rgb(189, 172, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                    Name.Text = args.text..": <font color=\"rgb(255, 255, 255)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                 end
 
                                 updateValue(args.key or Enum.KeyCode.Unknown)
